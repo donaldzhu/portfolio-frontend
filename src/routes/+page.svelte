@@ -152,6 +152,20 @@
     name="keywords"
     content="Donald Zhu, graphic designer Toronto, creative coder, web developer with design background, Toronto-based brand agency Concrete, typography-focused"
   />
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-QDFVYM9Q5X"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("js", new Date())
+
+    gtag("config", "G-QDFVYM9Q5X")
+  </script>
 </svelte:head>
 
 <style lang="scss">
