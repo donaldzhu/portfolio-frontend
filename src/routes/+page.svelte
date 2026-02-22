@@ -132,6 +132,26 @@
   <meta name="twitter:title" content={TITLE} />
   <meta name="twitter:description" content={DESCRIPTION} />
   <meta name="twitter:image" content={OG_IMAGE} />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Donald Zhu",
+      "url": "https://donaldzhu.ca",
+      "email": "contact@donaldzhu.ca",
+      "sameAs": ["https://www.instagram.com/donaldczhu"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Concrete",
+        "url": "https://concrete.ca"
+      }
+    }
+  </script>
+  <meta
+    name="keywords"
+    content="Donald Zhu, graphic designer Toronto, creative coder, web developer with design background, Toronto-based brand agency Concrete, typography-focused"
+  />
 </svelte:head>
 
 <style lang="scss">
