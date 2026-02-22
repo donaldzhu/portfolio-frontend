@@ -34,6 +34,11 @@
   onMount(() => {
     random = Math.random()
   })
+
+  const TITLE = "DONALD ZHU"
+  const DESCRIPTION =
+    "Donald Zhu is a Toronto-based designer, currently at Concrete."
+  const OG_IMAGE = "https://donaldzhu.ca/assets/images/og-image.png"
 </script>
 
 <main class:terminating={isTerminating} class:terminated={isTerminated}>
@@ -105,6 +110,29 @@
     <h3>GONE :(</h3>
   {/if}
 </main>
+
+<svelte:head>
+  <title>{isTerminated ? "GONE :(" : TITLE}</title>
+  <meta name="description" content={DESCRIPTION} />
+  <link
+    rel="icon"
+    href="/assets/images/favicon{isTerminated ? '-destroyed' : ''}.svg"
+  />
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://donaldzhu.ca/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={TITLE} />
+  <meta property="og:description" content={DESCRIPTION} />
+  <meta property="og:image" content={OG_IMAGE} />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:domain" content="donaldzhu.ca" />
+  <meta property="twitter:url" content="https://donaldzhu.ca/" />
+  <meta name="twitter:title" content={TITLE} />
+  <meta name="twitter:description" content={DESCRIPTION} />
+  <meta name="twitter:image" content={OG_IMAGE} />
+</svelte:head>
 
 <style lang="scss">
   main {
