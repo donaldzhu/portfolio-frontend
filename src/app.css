@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "TexGyreHeros Condensed";
+  src: url("/assets/fonts/TeXGyreHerosCondensed-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  font-family: "TexGyreHeros Condensed", "Helvetica", "Arial", sans-serif;
+  margin: 0;
+  position: relative;
+  --font-factor: 1;
+  --font-l: calc(5.3125rem * var(--font-factor));
+  --font-m: calc(3.4375rem * var(--font-factor));
+  --font-s: calc(1.5625rem * var(--font-factor));
+  --media-factor: 1;
+  --media-height: calc(225px * var(--media-factor));
+  --padding: 2rem;
+  --main-shift: 35px;
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  body {
+    --font-factor: 0.8;
+    --media-factor: 0.8;
+    --padding: 1.5rem;
+    --main-shift: 35px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  body {
+    --font-factor: 0.75;
+    --media-factor: 0.75;
+    --padding: 1.5rem;
+    --main-shift: 30px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    --font-factor: 0.7;
+    --media-factor: 0.7;
+    --padding: 1.5rem;
+    --main-shift: 20px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    --font-factor: 0.65;
+    --media-factor: 0.65;
+    --padding: 1.5rem;
+    --main-shift: 15px;
+    --font-s: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    --font-factor: 0.5;
+    --media-factor: 0.5;
+    --padding: 1.25rem;
+    --main-shift: 15px;
+    --font-s: 0.9375rem;
+  }
+}
+
+mux-player,
+img,
+video {
+  width: fit-content;
+  height: var(--media-height);
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+}
+button:hover {
+  color: rgb(255, 0, 0);
+  /* text-decoration: underline;
+  text-decoration-thickness: 5px; */
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+a,
+span {
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+* {
+  user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  width: fit-content;
+  margin: 0;
+}
+
+.link-container a,
+h1,
+h4 {
+  font-size: var(--font-s);
+}
+
+h2 {
+  font-size: var(--font-l);
+}
+
+h3 {
+  font-size: var(--font-m);
+}
+
+a, a:hover, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(255, 0, 0);
+  /* text-decoration: underline;
+  text-decoration-thickness: 5px; */
+}
