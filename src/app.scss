@@ -20,34 +20,34 @@ body {
 
 
   --padding: 2rem;
-  --main-shift: 35px;
+  --main-spacing: 35px;
 
   @media (min-width: 1441px) and (max-width: 1920px) {
     --font-factor: 0.8;
     --media-factor: 0.8;
     --padding: 1.5rem;
-    --main-shift: 35px;
+    --main-spacing: 35px;
   }
 
   @media (min-width: 1025px) and (max-width: 1440px) {
     --font-factor: 0.75;
     --media-factor: 0.75;
     --padding: 1.5rem;
-    --main-shift: 30px;
+    --main-spacing: 30px;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
     --font-factor: 0.7;
     --media-factor: 0.7;
     --padding: 1.5rem;
-    --main-shift: 20px;
+    --main-spacing: 20px;
   }
 
   @media (min-width: 481px) and (max-width: 768px) {
     --font-factor: 0.65;
     --media-factor: 0.65;
     --padding: 1.5rem;
-    --main-shift: 15px;
+    --main-spacing: 15px;
     --font-s: 1rem;
   }
 
@@ -55,7 +55,7 @@ body {
     --font-factor: 0.5;
     --media-factor: 0.5;
     --padding: 1.25rem;
-    --main-shift: 15px;
+    --main-spacing: 15px;
     --font-s: 0.9375rem;
   }
 }
@@ -63,7 +63,7 @@ body {
 mux-player,
 img,
 video {
-  width: fit-content;
+  width: auto;
   height: var(--media-height);
 }
 
@@ -71,11 +71,10 @@ video {
 $hover-color: rgb(255, 0, 0);
 
 @mixin hover {
-  &:hover {
-    color: $hover-color;
-    /* text-decoration: underline;
-    text-decoration-thickness: 5px; */
-
+  @media (hover: hover) {
+    &:hover {
+      color: $hover-color;
+    }
   }
 }
 

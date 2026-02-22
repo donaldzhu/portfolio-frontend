@@ -104,7 +104,11 @@
     </div>
 
     {#if isTerminating}
-      <img class="explosion" src="/assets/images/explosion.gif" />
+      <img
+        class="explosion"
+        src="/assets/images/explosion.gif"
+        alt="An animated explosion"
+      />
     {/if}
   {:else}
     <h3>GONE :(</h3>
@@ -179,6 +183,7 @@
     height: 100vh;
     padding: var(--padding);
     box-sizing: border-box;
+    background-color: white;
 
     @supports (height: 100dvh) {
       height: 100dvh;
@@ -198,11 +203,11 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    padding-bottom: var(--main-shift);
+    padding-bottom: var(--main-spacing);
   }
 
   .media-container {
-    padding: 35px 0;
+    padding: var(--main-spacing) 0;
     height: var(--media-height);
   }
 
